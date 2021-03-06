@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div>
+  <div
+    class="makeStyles-signIn-12"
+  >
+    <img
+      alt="bg"
+      class="makeStyles-bg-13"
+      src="bg1.jpg"
+    />
+    <div
+      id="tsparticles"
+    >
+      <canvas
+        class="tsparticles-canvas-el"
+        height="0"
+        style="position: fixed; width: 100%; height: 100%;"
+        width="0"
+      />
+    </div>
+    <section
+      class="makeStyles-section-7"
+    >
+      <div
+        class="MuiPaper-root MuiCard-root makeStyles-card-14 makeStyles-cardScreen-15 MuiPaper-elevation1 MuiPaper-rounded"
+      >
+        <div
+          class="MuiCardContent-root makeStyles-cardContent-16 makeStyles-cardContentScreen-17"
+        >
+          <img
+            alt="logo"
+            class="makeStyles-logo-8"
+            src="izzi.png"
+          />
+          <form
+            class="makeStyles-form-9"
+          >
+            <div
+              class="MuiFormControl-root MuiTextField-root makeStyles-input-18 MuiFormControl-fullWidth"
+            >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Mui-required Mui-required"
+                data-shrink="false"
+                for="email"
+                id="email-label"
+              >
+                E-mail
+                <span
+                  aria-hidden="true"
+                  class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+                >
+                   
+                  *
+                </span>
+              </label>
+              <div
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+              >
+                <input
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiInput-input"
+                  id="email"
+                  required=""
+                  type="text"
+                  value=""
+                />
+              </div>
+              
+            </div>
+            <div
+              class="MuiFormControl-root MuiTextField-root makeStyles-input-18 MuiFormControl-fullWidth"
+            >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Mui-required Mui-required"
+                data-shrink="false"
+                for="password"
+                id="password-label"
+              >
+                Senha
+                <span
+                  aria-hidden="true"
+                  class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+                >
+                   
+                  *
+                </span>
+              </label>
+              <div
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+              >
+                <input
+                  aria-describedby="password-helper-text"
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiInput-input"
+                  id="password"
+                  required=""
+                  type="password"
+                  value=""
+                />
+              </div>
+              <p
+                class="MuiFormHelperText-root Mui-required"
+                id="password-helper-text"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-withoutBorder-19"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    Esqueceu sua senha?
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+              </p>
+            </div>
+            <div
+              class="makeStyles-signInButton-10"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  Sign In
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+          </form>
+          <div
+            class="makeStyles-footer-11"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary"
+            >
+              Não possui uma conta?
+            </p>
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-withoutBorder-19"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiButton-label"
+              >
+                Sign Up
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div
+    class="Toastify"
+  />
+</div>
+`;

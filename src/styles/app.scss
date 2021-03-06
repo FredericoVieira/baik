@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  overflow: auto !important;
+  background-color: #131D20;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+}
+
+html, body, #app {
+  height: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background: #131D20;
+}
+
+section {
+  padding: 0px 45px;
+}
+
+.Toastify__toast {
+  background: #353741;
+  color: #FFF;
+  font-size: 1.5rem;
+  padding: 15px;
+  border-right: 5px solid #FFF;
+}
+
+.Toastify__toast--success {
+  border-color: #13C150;
+}
+
+.Toastify__toast--warning {
+  border-color: #FF9300;
+}
+
+.Toastify__toast--error {
+  border-color: #E10D05;
+}

@@ -3,20 +3,32 @@ export const enUS = {
     alert: {
       generic: {
         title: 'Oops!',
-        description: 'Algo deu errado. Tente novamente!'
+        description: 'Something went wrong. Try again!'
       },
       genericDecision: {
-        title: 'Atenção!',
-        description: 'Essa alteração não poderá ser desfeita.\nDeseja continuar?'
+        title: 'Attention!',
+        description: 'This change cannot be undone.\nDo you want to continue?'
       }
     }
   },
-  buttons: {},
+  buttons: {
+    contactUs: 'Contact us',
+    startBikingForFree: 'Start biking for free'
+  },
   labels: {
-    connectingUsersToBikes: 'Connecting users to bikes'
+    anyDoubts: 'Any doubts?',
+    bikesInAllLocations: 'Bikes in all locations',
+    connectingUsersToBikes: 'Connecting users to bikes',
+    description:
+      'We are a sustainable company that believes everyone can improve the planet. Go from Baik and collaborate with nature.',
+    findYourBike: 'Find your bike. Cycle to your destination. Give it back.',
+    findYourWay: 'Find your way to come and go wherever',
+    forEveryOne: 'for everyone',
+    wheneverYouWant: 'and whenever you want',
+    repeat: 'Repeat.'
   },
   toast: {
-    genericError: 'Algo deu errado. Tente novamente!'
+    genericError: 'Something went wrong. Try again!'
   }
 }
 

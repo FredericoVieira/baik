@@ -16,39 +16,41 @@ html {
 body {
   box-sizing: border-box;
   overflow: auto !important;
-  background-color: #131D20;
+  background-color: #020405;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
 }
 
-html, body, #app {
+html,
+body,
+#app {
   height: 100%;
   display: flex;
   flex: 1;
   flex-direction: column;
-  background: #131D20;
+  background: #020405;
 }
 
 section {
-  padding: 0px 45px;
+  padding: 100px;
 }
 
 .Toastify__toast {
   background: #353741;
-  color: #FFF;
+  color: #fff;
   font-size: 1.5rem;
   padding: 15px;
-  border-right: 5px solid #FFF;
+  border-right: 5px solid #fff;
 }
 
 .Toastify__toast--success {
-  border-color: #13C150;
+  border-color: #13c150;
 }
 
 .Toastify__toast--warning {
-  border-color: #FF9300;
+  border-color: #ff9300;
 }
 
 .Toastify__toast--error {
-  border-color: #E10D05;
+  border-color: #e10d05;
 }

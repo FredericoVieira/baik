@@ -21,7 +21,7 @@ const useStyles = makeStyles(() => ({
   }
 }))
 
-const NavBar = () => {
+const NavBar = ({ onClick }) => {
   const classes = useStyles()
   const { labels, buttons } = language
 
@@ -40,11 +40,7 @@ const NavBar = () => {
         </Text>
       </div>
       <div className={classes.button}>
-        <PrimaryButton
-          size="large"
-          text={buttons.startBikingForFree}
-          onClick={() => alert('biking for free')}
-        />
+        <PrimaryButton size="large" text={buttons.startBikingForFree} onClick={onClick} />
       </div>
     </section>
   )

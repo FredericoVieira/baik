@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import RepeatIcon from '@material-ui/icons/Repeat'
 
@@ -37,7 +37,9 @@ const useStyles = makeStyles(theme => ({
   },
   background: {
     width: '100%',
-    opacity: '0.2'
+    opacity: '0.2',
+    maxHeight: 400,
+    objectFit: 'cover'
   },
   anyDoubts: {
     position: 'absolute',
@@ -56,14 +58,17 @@ const Home = () => {
   const classes = useStyles()
   const { labels, buttons } = language
 
+  const myRef = useRef(null)
+  const executeScroll = () => myRef.current.scrollIntoView({ block: 'start', behavior: 'smooth' })
+
   return (
     <>
-      <Header />
+      <Header onClick={executeScroll} />
       <section className={classes.description}>
         <img src={userBikes} alt="user-bikes" className={classes.image} />
         <Text variant="h2">{labels.description}</Text>
       </section>
-      <section className={classes.map}>
+      <section ref={myRef} className={classes.map}>
         <Text variant="h2">MAP HERE</Text>
       </section>
       <section className={classes.repeat}>
@@ -75,11 +80,12 @@ const Home = () => {
         <PrimaryCard>
           <img src={background} alt="user-bikes" className={classes.background} />
           <div className={classes.anyDoubts}>
-            <Text variant="h2">{labels.anyDoubts}</Text>
+            <Text variant="h3">{labels.anyDoubts}</Text>
             <PrimaryButton
               size="large"
               text={buttons.contactUs}
-              onClick={() => alert('contact us')}
+              // eslint-disable-next-line no-return-assign
+              onClick={() => (window.location.href = 'mailto:baik@support.com')}
             />
           </div>
         </PrimaryCard>

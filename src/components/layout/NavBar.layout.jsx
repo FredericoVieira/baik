@@ -34,10 +34,10 @@ const NavBar = () => {
     <AppBar position="static">
       <Toolbar className={classes.toolbar}>
         <div className={classes.logoWrapper}>
-          <img src={baikLogo} alt="logo" className={classes.logo} />
+          <img src={baikLogo} alt="baik-logo" className={classes.logo} />
           <Text variant="h4">Baik</Text>
         </div>
-        <Text variant="h6">{labels.connectingUsersToBikes}</Text>
+        <Text variant="h6">{labels.connectingUsersToBikes.toUpperCase()}</Text>
       </Toolbar>
     </AppBar>
   )

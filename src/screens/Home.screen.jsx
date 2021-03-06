@@ -78,7 +78,7 @@ const Home = () => {
       </section>
       <section className={classes.contactUs}>
         <PrimaryCard>
-          <img src={background} alt="user-bikes" className={classes.background} />
+          <img src={background} alt="background" className={classes.background} />
           <div className={classes.anyDoubts}>
             <Text variant="h3">{labels.anyDoubts}</Text>
             <PrimaryButton

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import ReactMapGL, {
   Popup,
   GeolocateControl,
@@ -11,8 +11,8 @@ import Pins from './Pins.component'
 import BikeInfo from './BikeInfo.component'
 import ControlPanel from './ControlPanel.component'
 
-const BikesMap = ({ networks }) => {
-  const [viewport, setViewport] = useState({
+const BikesMap = ({ networks, selectedNetwork }) => {
+  const [viewportState, setViewportState] = useState({
     latitude: 9.081999,
     longitude: 8.675277,
     zoom: 1
@@ -49,23 +49,24 @@ const BikesMap = ({ networks }) => {
   return (
     <>
       <ReactMapGL
-        {...viewport}
+        {...viewportState}
         width="100%"
         height="70vh"
-        onViewportChange={viewport => setViewport(viewport)}
+        onViewportChange={viewport => setViewportState(viewport)}
         mapStyle={mapboxStyle}
         mapboxApiAccessToken={mapboxToken}
       >
-        <Pins networks={networks} onClick={setNetwork} />
+        <Pins networks={networks} selectedNetwork={selectedNetwork} setNetwork={setNetwork} />
         {network && (
           <Popup
             tipSize={5}
             anchor="top"
             longitude={network.location.longitude}
             latitude={network.location.latitude}
+            closeOnClick={false}
             onClose={setNetwork}
           >
-            <BikeInfo network={network} />
+            <BikeInfo network={network} selectedNetwork={selectedNetwork} />
           </Popup>
         )}
         <GeolocateControl

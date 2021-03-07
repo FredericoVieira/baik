@@ -12,7 +12,9 @@ export const enUS = {
     }
   },
   buttons: {
+    back: 'Back',
     contactUs: 'Contact us',
+    details: 'Details',
     startBikingForFree: 'Start biking for free'
   },
   labels: {
@@ -26,11 +28,13 @@ export const enUS = {
     findYourWay: 'Find your way to come and go wherever',
     forEveryOne: 'for everyone',
     networksByCountry: 'Networks by country',
-    wheneverYouWant: 'and whenever you want',
-    repeat: 'Repeat.'
+    stations: 'Stations',
+    repeat: 'Repeat.',
+    wheneverYouWant: 'and whenever you want'
   },
   toast: {
     genericError: 'Something went wrong. Try again!',
+    getNetworkDetailError: 'Error on retrieve network detail!',
     getNetworksError: 'Error on retrieve networks!'
   }
 }

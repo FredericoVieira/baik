@@ -12,6 +12,7 @@ import PrimaryButton from '../components/buttons/PrimaryButton.component'
 import BikesMap from '../components/maps/BikesMap.component'
 import userBikes from '../assets/images/user-bikes.png'
 import background from '../assets/images/background.png'
+import { setSelectedNetwork } from '../actions'
 
 const useStyles = makeStyles(theme => ({
   description: {
@@ -65,7 +66,7 @@ const Home = () => {
   const { labels, buttons } = language
   const [globalState, globalActions] = useGlobal()
   const { getNetworks } = globalActions
-  const { networks } = globalState.bikes
+  const { networks, selectedNetwork } = globalState.bikes
 
   const [networksState, setNetworksState] = useState([])
 
@@ -86,7 +87,7 @@ const Home = () => {
         <Text variant="h2">{labels.description}</Text>
       </section>
       <section ref={myRef} className={classes.map}>
-        <BikesMap networks={networksState} />
+        <BikesMap networks={networksState} selectedNetwork={selectedNetwork} />
       </section>
       <section className={classes.repeat}>
         <Text variant="h4">{labels.findYourBike}</Text>

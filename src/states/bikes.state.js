@@ -1,5 +1,6 @@
 const bikes = {
-  networks: []
+  networks: [],
+  selectedNetwork: null
 }
 
 export default bikes

@@ -54,3 +54,12 @@ section {
 .Toastify__toast--error {
   border-color: #e10d05;
 }
+
+.mapboxgl-popup-close-button {
+  display: none;
+}
+
+.mapboxgl-popup-content {
+  background-color: #353741 !important;
+  padding: 15px !important;
+}

@@ -9,6 +9,7 @@ import Header from '../components/layout/Header.layout'
 import Text from '../components/typography/Text.component'
 import PrimaryCard from '../components/cards/PrimaryCard.component'
 import PrimaryButton from '../components/buttons/PrimaryButton.component'
+import BikesMap from '../components/maps/BikesMap.component'
 import userBikes from '../assets/images/user-bikes.png'
 import background from '../assets/images/background.png'
 
@@ -25,6 +26,10 @@ const useStyles = makeStyles(theme => ({
     width: '90%',
     display: 'flex',
     justifySelf: 'flex-end'
+  },
+  map: {
+    padding: 0,
+    position: 'relative'
   },
   repeat: {
     backgroundColor: theme.palette.purple.darkness,
@@ -81,8 +86,7 @@ const Home = () => {
         <Text variant="h2">{labels.description}</Text>
       </section>
       <section ref={myRef} className={classes.map}>
-        <Text variant="h2">MAP HERE</Text>
-        <Text variant="h2">{networksState[0]?.id}</Text>
+        <BikesMap networks={networksState} />
       </section>
       <section className={classes.repeat}>
         <Text variant="h4">{labels.findYourBike}</Text>
@@ -93,7 +97,7 @@ const Home = () => {
         <PrimaryCard>
           <img src={background} alt="background" className={classes.background} />
           <div className={classes.anyDoubts}>
-            <Text variant="h3">{labels.anyDoubts}</Text>
+            <Text variant="h4">{labels.anyDoubts}</Text>
             <PrimaryButton
               size="large"
               text={buttons.contactUs}

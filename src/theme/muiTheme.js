@@ -131,6 +131,18 @@ const theme = createMuiTheme({
       colorError: {
         color: '#E10D05'
       }
+    },
+    MuiIconButton: {
+      root: {
+        color: '#FFF'
+      }
+    },
+    MuiAccordion: {
+      root: {
+        '&$expanded': {
+          margin: 0
+        }
+      }
     }
   }
 })

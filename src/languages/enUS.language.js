@@ -28,7 +28,8 @@ export const enUS = {
     repeat: 'Repeat.'
   },
   toast: {
-    genericError: 'Something went wrong. Try again!'
+    genericError: 'Something went wrong. Try again!',
+    getNetworksError: 'Error on retrieve networks!'
   }
 }
 

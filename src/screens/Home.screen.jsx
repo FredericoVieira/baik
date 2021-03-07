@@ -1,7 +1,8 @@
-import React, { useRef } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import RepeatIcon from '@material-ui/icons/Repeat'
 
+import useGlobal from '../store'
 import { language } from '../languages'
 
 import Header from '../components/layout/Header.layout'
@@ -57,6 +58,17 @@ const useStyles = makeStyles(theme => ({
 const Home = () => {
   const classes = useStyles()
   const { labels, buttons } = language
+  const [globalState, globalActions] = useGlobal()
+  const { getNetworks } = globalActions
+  const { networks } = globalState.bikes
+
+  const [networksState, setNetworksState] = useState([])
+
+  useEffect(() => {
+    if (networks.length === 0) {
+      getNetworks()
+    } else setNetworksState(networks)
+  }, [networks])
 
   const myRef = useRef(null)
   const executeScroll = () => myRef.current.scrollIntoView({ block: 'start', behavior: 'smooth' })
@@ -70,6 +82,7 @@ const Home = () => {
       </section>
       <section ref={myRef} className={classes.map}>
         <Text variant="h2">MAP HERE</Text>
+        <Text variant="h2">{networksState[0]?.id}</Text>
       </section>
       <section className={classes.repeat}>
         <Text variant="h4">{labels.findYourBike}</Text>

@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { apiUrl } from './config'
 
-const requester = async (method, endpoint, data = {}) => {
+const requester = async (method, endpoint, data = null) => {
   const config = {
     method,
     baseURL: apiUrl,

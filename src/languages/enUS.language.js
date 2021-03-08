@@ -13,6 +13,7 @@ export const enUS = {
   },
   buttons: {
     back: 'Back',
+    clearSelection: 'Clear selection',
     contactUs: 'Contact us',
     details: 'Details',
     startBikingForFree: 'Start biking for free'
@@ -27,7 +28,13 @@ export const enUS = {
     findYourBike: 'Find your bike. Cycle to your destination. Give it back.',
     findYourWay: 'Find your way to come and go wherever',
     forEveryOne: 'for everyone',
+    freeBikes: 'Free bikes',
+    emptySlots: 'Empty slots',
+    network: 'Network',
+    networkSelected: 'Network selected',
     networksByCountry: 'Networks by country',
+    slots: 'Slots',
+    station: 'Station',
     stations: 'Stations',
     repeat: 'Repeat.',
     wheneverYouWant: 'and whenever you want'

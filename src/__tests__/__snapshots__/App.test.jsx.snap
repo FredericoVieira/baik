@@ -31,7 +31,7 @@ exports[`matches snapshot 1`] = `
   </header>
   <section>
     <div
-      class="makeStyles-title-9"
+      class="makeStyles-title-10"
     >
       <h1
         class="MuiTypography-root MuiTypography-h1 MuiTypography-colorTextPrimary"
@@ -45,7 +45,7 @@ exports[`matches snapshot 1`] = `
       </h1>
     </div>
     <div
-      class="makeStyles-subtitle-10"
+      class="makeStyles-subtitle-11"
     >
       <h4
         class="MuiTypography-root MuiTypography-h4 MuiTypography-colorTextSecondary"
@@ -59,7 +59,7 @@ exports[`matches snapshot 1`] = `
       </h4>
     </div>
     <div
-      class="makeStyles-button-11"
+      class="makeStyles-button-12"
     >
       <button
         class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeLarge MuiButton-sizeLarge"
@@ -91,15 +91,173 @@ exports[`matches snapshot 1`] = `
       We are a sustainable company that believes everyone can improve the planet. Go from Baik and collaborate with nature.
     </h2>
   </section>
-  <section>
-    <h2
-      class="MuiTypography-root MuiTypography-h2 MuiTypography-colorTextPrimary"
+  <section
+    class="makeStyles-map-6"
+  >
+    <div
+      style="position: relative; width: 100%; height: 70vh; cursor: grab; outline: none;"
+      tabindex="0"
     >
-      MAP HERE
-    </h2>
+      <div
+        style="position: relative; width: 100%; height: 100%;"
+      >
+        <div
+          class=""
+          style="position: absolute; width: 100%; height: 100%; overflow: hidden; visibility: inherit;"
+        />
+      </div>
+    </div>
+    <div
+      class="MuiPaper-root MuiAccordion-root makeStyles-controlPanel-14 MuiAccordion-rounded MuiPaper-elevation1 MuiPaper-rounded"
+    >
+      <div
+        aria-controls="panel1a-content"
+        aria-disabled="false"
+        aria-expanded="false"
+        class="MuiButtonBase-root MuiAccordionSummary-root"
+        id="panel1a-header"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="MuiAccordionSummary-content"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary"
+          >
+            Networks by country
+          </p>
+        </div>
+        <div
+          aria-disabled="false"
+          aria-hidden="true"
+          class="MuiButtonBase-root MuiIconButton-root MuiAccordionSummary-expandIcon MuiIconButton-edgeEnd"
+        >
+          <span
+            class="MuiIconButton-label"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+              />
+            </svg>
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </div>
+      </div>
+      <div
+        class="MuiCollapse-container MuiCollapse-hidden"
+        style="min-height: 0px;"
+      >
+        <div
+          class="MuiCollapse-wrapper"
+        >
+          <div
+            class="MuiCollapse-wrapperInner"
+          >
+            <div
+              aria-labelledby="panel1a-header"
+              id="panel1a-content"
+              role="region"
+            >
+              <div
+                class="MuiAccordionDetails-root makeStyles-networksByCountryWrapper-15"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="makeStyles-controlSelection-17"
+    >
+      <div
+        class="makeStyles-pins-18"
+      >
+        <div
+          class="makeStyles-pin-19"
+        >
+          <svg
+            height="15"
+            style="fill: #D64C1C; stroke: none;"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M20.2,15.7L20.2,15.7c1.1-1.6,1.8-3.6,1.8-5.7c0-5.6-4.5-10-10-10S2,4.5,2,10c0,2,0.6,3.9,1.6,5.4c0,0.1,0.1,0.2,0.2,0.3
+c0,0,0.1,0.1,0.1,0.2c0.2,0.3,0.4,0.6,0.7,0.9c2.6,3.1,7.4,7.6,7.4,7.6s4.8-4.5,7.4-7.5c0.2-0.3,0.5-0.6,0.7-0.9
+C20.1,15.8,20.2,15.8,20.2,15.7z"
+            />
+          </svg>
+          <p
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextPrimary"
+          >
+            Network
+          </p>
+        </div>
+        <div
+          class="makeStyles-pin-19"
+        >
+          <svg
+            height="15"
+            style="fill: #F2AB1D; stroke: none;"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M20.2,15.7L20.2,15.7c1.1-1.6,1.8-3.6,1.8-5.7c0-5.6-4.5-10-10-10S2,4.5,2,10c0,2,0.6,3.9,1.6,5.4c0,0.1,0.1,0.2,0.2,0.3
+c0,0,0.1,0.1,0.1,0.2c0.2,0.3,0.4,0.6,0.7,0.9c2.6,3.1,7.4,7.6,7.4,7.6s4.8-4.5,7.4-7.5c0.2-0.3,0.5-0.6,0.7-0.9
+C20.1,15.8,20.2,15.8,20.2,15.7z"
+            />
+          </svg>
+          <p
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextPrimary"
+          >
+            Selected network
+          </p>
+        </div>
+        <div
+          class="makeStyles-pin-19"
+        >
+          <svg
+            height="15"
+            style="fill: #88B73D; stroke: none;"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M20.2,15.7L20.2,15.7c1.1-1.6,1.8-3.6,1.8-5.7c0-5.6-4.5-10-10-10S2,4.5,2,10c0,2,0.6,3.9,1.6,5.4c0,0.1,0.1,0.2,0.2,0.3
+c0,0,0.1,0.1,0.1,0.2c0.2,0.3,0.4,0.6,0.7,0.9c2.6,3.1,7.4,7.6,7.4,7.6s4.8-4.5,7.4-7.5c0.2-0.3,0.5-0.6,0.7-0.9
+C20.1,15.8,20.2,15.8,20.2,15.7z"
+            />
+          </svg>
+          <p
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextPrimary"
+          >
+            Station
+          </p>
+        </div>
+      </div>
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSizeSmall MuiButton-sizeSmall Mui-disabled Mui-disabled"
+        disabled=""
+        tabindex="-1"
+        type="button"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          Clear selection
+        </span>
+      </button>
+    </div>
   </section>
   <section
-    class="makeStyles-repeat-6"
+    class="makeStyles-repeat-7"
   >
     <h4
       class="MuiTypography-root MuiTypography-h4 MuiTypography-colorTextPrimary"
@@ -124,24 +282,24 @@ exports[`matches snapshot 1`] = `
   </section>
   <section>
     <div
-      class="MuiPaper-root MuiCard-root makeStyles-card-13 MuiPaper-elevation1 MuiPaper-rounded"
+      class="MuiPaper-root MuiCard-root makeStyles-card-21 MuiPaper-elevation1 MuiPaper-rounded"
     >
       <div
-        class="MuiCardContent-root makeStyles-cardContent-14"
+        class="MuiCardContent-root makeStyles-cardContent-22"
       >
         <img
           alt="background"
-          class="makeStyles-background-7"
+          class="makeStyles-background-8"
           src="background.png"
         />
         <div
-          class="makeStyles-anyDoubts-8"
+          class="makeStyles-anyDoubts-9"
         >
-          <h3
-            class="MuiTypography-root MuiTypography-h3 MuiTypography-colorTextPrimary"
+          <h4
+            class="MuiTypography-root MuiTypography-h4 MuiTypography-colorTextPrimary"
           >
             Any doubts?
-          </h3>
+          </h4>
           <button
             class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeLarge MuiButton-sizeLarge"
             tabindex="0"

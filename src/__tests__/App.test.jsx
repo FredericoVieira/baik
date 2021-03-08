@@ -4,6 +4,10 @@ import { ThemeProvider } from '@material-ui/core/styles'
 import App from '../App'
 import muiTheme from '../theme/muiTheme'
 
+jest.mock('mapbox-gl/dist/mapbox-gl', () => ({
+  Map: () => ({})
+}))
+
 test('matches snapshot', () => {
   const { container } = render(
     <ThemeProvider theme={muiTheme}>

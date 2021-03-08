@@ -5,7 +5,8 @@ import ReactMapGL, {
   GeolocateControl,
   NavigationControl,
   FullscreenControl,
-  ScaleControl
+  ScaleControl,
+  FlyToInterpolator
 } from 'react-map-gl'
 import mapboxgl from 'mapbox-gl'
 import { mapboxToken, mapboxStyle } from '../../resources/config'
@@ -14,16 +15,16 @@ import BikeInfo from './BikeInfo.component'
 import ControlPanel from './ControlPanel.component'
 import ControlSelection from './ControlSelection.component'
 
-// @ts-ignore
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/no-unresolved
 mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default
 
 const BikesMap = ({ networks, selectedNetwork }) => {
-  const [viewportState, setViewportState] = useState({
+  const initialViewportState = {
     latitude: 9.081999,
     longitude: 8.675277,
     zoom: 1
-  })
+  }
+  const [viewportState, setViewportState] = useState(initialViewportState)
 
   const [network, setNetwork] = useState(null)
 
@@ -62,6 +63,8 @@ const BikesMap = ({ networks, selectedNetwork }) => {
         onViewportChange={viewport => setViewportState(viewport)}
         mapStyle={mapboxStyle}
         mapboxApiAccessToken={mapboxToken}
+        transitionDuration={1000}
+        transitionInterpolator={new FlyToInterpolator()}
       >
         <Pins networks={networks} selectedNetwork={selectedNetwork} setNetwork={setNetwork} />
         {network && (
@@ -73,7 +76,11 @@ const BikesMap = ({ networks, selectedNetwork }) => {
             closeOnClick={false}
             onClose={setNetwork}
           >
-            <BikeInfo network={network} />
+            <BikeInfo
+              network={network}
+              initialViewportState={initialViewportState}
+              setViewportState={setViewportState}
+            />
           </Popup>
         )}
         <GeolocateControl
@@ -87,7 +94,11 @@ const BikesMap = ({ networks, selectedNetwork }) => {
         <ScaleControl style={scaleControlStyle} />
       </ReactMapGL>
       <ControlPanel networks={networks} />
-      <ControlSelection selectedNetwork={selectedNetwork} setNetwork={setNetwork} />
+      <ControlSelection
+        selectedNetwork={selectedNetwork}
+        setNetwork={setNetwork}
+        setViewportState={() => setViewportState(initialViewportState)}
+      />
     </>
   )
 }

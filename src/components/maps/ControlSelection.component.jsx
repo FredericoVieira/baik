@@ -36,21 +36,21 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const ControlSelection = ({ selectedNetwork, setNetwork }) => {
+const ControlSelection = ({ selectedNetwork, setNetwork, setViewportState }) => {
   const classes = useStyles()
   const { labels, buttons } = language
   const [, globalActions] = useGlobal()
   const { clearSelectedNetwork } = globalActions
 
   const LABELS = {
-    pin: labels.networkSelected,
+    pin: labels.selectedNetwork,
     pins: labels.network,
     stations: labels.station
   }
 
   const handleTypes = pin => (
-    <div className={classes.pin}>
-      <Pin key={pin} size={15} type={pin} cursor={false} trasform={false} />
+    <div key={pin} className={classes.pin}>
+      <Pin size={15} type={pin} cursor={false} trasform={false} />
       <Text variant="body2">{LABELS[pin]}</Text>
     </div>
   )
@@ -65,6 +65,7 @@ const ControlSelection = ({ selectedNetwork, setNetwork }) => {
         onClick={() => {
           clearSelectedNetwork()
           setNetwork(null)
+          setViewportState()
         }}
       />
     </div>

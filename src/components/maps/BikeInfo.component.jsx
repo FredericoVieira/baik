@@ -6,7 +6,7 @@ import { language } from '../../languages'
 import Text from '../typography/Text.component'
 import SecondaryButton from '../buttons/SecondaryButton.component'
 
-const BikeInfo = ({ network }) => {
+const BikeInfo = ({ network, initialViewportState, setViewportState }) => {
   const { labels, buttons } = language
   const [globalState, globalActions] = useGlobal()
   const { selectedNetwork } = globalState.bikes
@@ -63,7 +63,21 @@ const BikeInfo = ({ network }) => {
       <SecondaryButton
         size="small"
         text={isNetworkSelected ? buttons.back : buttons.details}
-        onClick={() => (isNetworkSelected ? clearSelectedNetwork() : getNetworkDetails(network))}
+        onClick={
+          isNetworkSelected
+            ? () => {
+                clearSelectedNetwork()
+                setViewportState(initialViewportState)
+              }
+            : () => {
+                getNetworkDetails(network)
+                setViewportState({
+                  latitude: network.location.latitude,
+                  longitude: network.location.longitude,
+                  zoom: 14
+                })
+              }
+        }
       />
     </div>
   )

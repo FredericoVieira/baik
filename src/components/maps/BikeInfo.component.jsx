@@ -14,21 +14,40 @@ const BikeInfo = ({ network }) => {
 
   const [networkState, setNetworkState] = useState({})
   const [isNetworkSelected, setIsNetworkSelected] = useState(false)
+  const [isStationSelected, setIsStationSelected] = useState(false)
 
   useEffect(() => {
-    if (selectedNetwork?.stations) {
+    if (network?.isStation) {
+      setIsStationSelected(true)
+      setNetworkState(network)
+    } else if (selectedNetwork?.stations) {
       setIsNetworkSelected(true)
       setNetworkState(selectedNetwork)
     } else {
       setIsNetworkSelected(false)
       setNetworkState(network)
     }
-  }, [selectedNetwork])
+  }, [network, selectedNetwork])
 
   const { name, company, location } = networkState
   const locationHandled = `${location?.city}, ${location?.country}`
 
-  return (
+  return isStationSelected ? (
+    <div>
+      <Text variant="h6">{name}</Text>
+      <Text
+        variant="body1"
+        color="textSecondary"
+      >{`${labels.freeBikes}: ${network?.freeBikes}`}</Text>
+      <Text
+        variant="body1"
+        color="textSecondary"
+      >{`${labels.emptySlots}: ${network?.emptySlots}`}</Text>
+      <Text variant="body1" color="textSecondary">{`${labels.slots}: ${
+        network?.freeBikes + network?.emptySlots
+      }`}</Text>
+    </div>
+  ) : (
     <div>
       <Text variant="h6">{name}</Text>
       <Text variant="body1" color="textSecondary">{`${labels.company}: ${company?.[0]}`}</Text>

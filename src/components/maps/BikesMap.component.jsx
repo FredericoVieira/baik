@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import ReactMapGL, {
   Popup,
   GeolocateControl,
@@ -10,6 +10,7 @@ import { mapboxToken, mapboxStyle } from '../../resources/config'
 import Pins from './Pins.component'
 import BikeInfo from './BikeInfo.component'
 import ControlPanel from './ControlPanel.component'
+import ControlSelection from './ControlSelection.component'
 
 const BikesMap = ({ networks, selectedNetwork }) => {
   const [viewportState, setViewportState] = useState({
@@ -66,7 +67,7 @@ const BikesMap = ({ networks, selectedNetwork }) => {
             closeOnClick={false}
             onClose={setNetwork}
           >
-            <BikeInfo network={network} selectedNetwork={selectedNetwork} />
+            <BikeInfo network={network} />
           </Popup>
         )}
         <GeolocateControl
@@ -80,6 +81,7 @@ const BikesMap = ({ networks, selectedNetwork }) => {
         <ScaleControl style={scaleControlStyle} />
       </ReactMapGL>
       <ControlPanel networks={networks} />
+      <ControlSelection selectedNetwork={selectedNetwork} setNetwork={setNetwork} />
     </>
   )
 }

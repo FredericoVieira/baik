@@ -1,3 +1,4 @@
+/* eslint-disable import/no-duplicates */
 import React, { useState } from 'react'
 import ReactMapGL, {
   Popup,
@@ -6,11 +7,16 @@ import ReactMapGL, {
   FullscreenControl,
   ScaleControl
 } from 'react-map-gl'
+import mapboxgl from 'mapbox-gl'
 import { mapboxToken, mapboxStyle } from '../../resources/config'
 import Pins from './Pins.component'
 import BikeInfo from './BikeInfo.component'
 import ControlPanel from './ControlPanel.component'
 import ControlSelection from './ControlSelection.component'
+
+// @ts-ignore
+// eslint-disable-next-line import/no-webpack-loader-syntax, import/no-unresolved
+mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default
 
 const BikesMap = ({ networks, selectedNetwork }) => {
   const [viewportState, setViewportState] = useState({

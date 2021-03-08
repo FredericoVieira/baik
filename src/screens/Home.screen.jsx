@@ -12,7 +12,6 @@ import PrimaryButton from '../components/buttons/PrimaryButton.component'
 import BikesMap from '../components/maps/BikesMap.component'
 import userBikes from '../assets/images/user-bikes.png'
 import background from '../assets/images/background.png'
-import { setSelectedNetwork } from '../actions'
 
 const useStyles = makeStyles(theme => ({
   description: {

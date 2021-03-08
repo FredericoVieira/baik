@@ -1,4 +1,3 @@
-/* eslint-disable import/no-duplicates */
 import React, { useState } from 'react'
 import ReactMapGL, {
   Popup,
@@ -15,8 +14,9 @@ import BikeInfo from './BikeInfo.component'
 import ControlPanel from './ControlPanel.component'
 import ControlSelection from './ControlSelection.component'
 
+// TODO: Add these lines to force mapbox load correctly on production build
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/no-unresolved
-mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default
+// mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default
 
 const BikesMap = ({ networks, selectedNetwork }) => {
   const initialViewportState = {

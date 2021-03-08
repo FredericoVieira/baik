@@ -35,3 +35,7 @@ yarn build
 ```
 
 Access localhost:3000
+
+### Also available in:
+
+https://baikfv.netlify.app/
